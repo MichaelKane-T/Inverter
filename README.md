@@ -9,10 +9,11 @@ Field-Oriented Control (FOC).
 
 Current MCU candidate:
 
-- STMicroelectronics SR5E1E3
-- Automotive AEC-Q100 qualified
-- Arm Cortex-M7
-- Motor-control peripherals
+- STM32G474RET6
+- 32-bit Cortex®-M4 CPU 
+- FPU
+- Adaptive real-time accelerator (ARTAccelerator) allowing 0-wait-state execution from Flash memory 
+- frequency up to 170 MHz with 213 DMIPS, MPU, DSP instruction
 - ADC
 - PWM / HRTIM
 - CAN-FD
