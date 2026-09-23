@@ -2,21 +2,31 @@
 
 Motor-control firmware for the BYU Racing inverter capstone project.
 
-## Target
+## Target MCU
 
-The controller is intended to support a three-phase motor inverter with
-Field-Oriented Control (FOC).
+STMicroelectronics STM32G474RET6
 
-Current MCU candidate:
+The STM32G474RET6 was selected for its motor-control, mixed-signal, and real-time processing capabilities.
 
-- STM32G474RET6
-- 32-bit Cortex®-M4 CPU 
-- FPU
-- Adaptive real-time accelerator (ARTAccelerator) allowing 0-wait-state execution from Flash memory 
-- frequency up to 170 MHz with 213 DMIPS, MPU, DSP instruction
-- ADC
-- PWM / HRTIM
-- CAN-FD
+Key features relevant to this project include:
+
+32-bit Arm Cortex-M4 CPU
+Up to 170 MHz CPU frequency
+Single-precision Floating Point Unit (FPU)
+DSP instruction support
+CORDIC hardware accelerator for trigonometric operations
+FMAC hardware accelerator
+512 KB Flash memory
+128 KB SRAM
+Five fast 12-bit ADCs
+Three advanced motor-control timers
+High-Resolution Timer (HRTIM)
+Hardware dead-time generation and emergency-stop support
+Three FDCAN controllers
+DMA support
+Hardware watchdogs
+
+These peripherals make the STM32G474 well suited for real-time motor-control applications where PWM generation, synchronized ADC sampling, current control, and mathematical operations must execute deterministically.
 
 ## Software Architecture
 
@@ -49,7 +59,7 @@ Drivers / HAL
         │
         ▼
 Hardware
-└── SR5E1E3
+└── STM32G474RET6
 ```
 
 ## Repository Structure
