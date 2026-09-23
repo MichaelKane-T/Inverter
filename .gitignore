@@ -1,0 +1,31 @@
+# Build directories
+build/
+out/
+bin/
+
+# Object files
+*.o
+*.obj
+
+# Firmware output
+*.elf
+*.hex
+*.bin
+*.map
+
+# Debug files
+*.d
+*.su
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*~
